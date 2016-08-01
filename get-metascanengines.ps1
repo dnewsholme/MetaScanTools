@@ -23,7 +23,7 @@ function Get-MetascanEngines{
       $http = "https"
     }
     else {$http = "http"}
-    $enginesapi = "$http://" + $Computername + ":8008/metascan_rest/stat/engines"
+    $enginesapi = "$($http)://" + $Computername + ":8008/metascan_rest/stat/engines"
     #Query the rest interface
     try {
         $result = invoke-restmethod $enginesapi -method get -timeoutsec 5 -ErrorAction Stop

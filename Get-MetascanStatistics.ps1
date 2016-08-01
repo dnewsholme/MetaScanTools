@@ -30,10 +30,10 @@ function Get-MetascanStatstics{
     }
     Else {$http = "http"}
     #MetaScan Rest API
-    $statusapi = "$http://" + $Computername + ":$port/metascan_rest/status"
-    $scanhistoryapi = "$http://" + $Computername + ":$port/metascan_rest/stat/scanhistory/$CheckPeriod"
-    $fileuploadapi = "$http://" + $Computername + ":$port/metascan_rest/stat/fileuploads/$CheckPeriod"
-    $queueapi = "$http://" + $Computername + ":$port/metascan_rest/file/inqueue"
+    $statusapi = "$($http)://" + $Computername + ":$port/metascan_rest/status"
+    $scanhistoryapi = "$($http)://" + $Computername + ":$port/metascan_rest/stat/scanhistory/$CheckPeriod"
+    $fileuploadapi = "$($http)://" + $Computername + ":$port/metascan_rest/stat/fileuploads/$CheckPeriod"
+    $queueapi = "$($http)://" + $Computername + ":$port/metascan_rest/file/inqueue"
 
     #Query the rest interface
     $statusresult = invoke-restmethod $statusapi -method get -timeoutsec 5
