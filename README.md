@@ -3,7 +3,7 @@ A group of Powershell cmdlets to send files to scanned with metascan and to get 
 
 ## Request MetaScan
 ```powershell
-Request-MetaScan -file C:\temp\file.txt -metascanserver 192.168.49.10 -email -mailserver someserver -senderaddress metascan@domain.com -recipientaddress alerts@domain.com
+Request-MetaScan -file C:\temp\file.txt -metascanserver 192.168.49.10 -port 8008
 ```
 
 ## Get Metascan Engines Information
@@ -13,5 +13,5 @@ Get-MetascanEngies
 
 ## Get Metascan Statistics
 ```powershell
-Get-MetascanStatstics -Computername "671630-lteitg04" -checkperiod 1
+Get-MetascanStatstics -Computername "servername" -checkperiod 1
 ```
